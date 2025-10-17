@@ -23,13 +23,19 @@
     animation: glow 1.5s infinite alternate;
     text-align:center;
   }
-  @keyframes glow { from { text-shadow:0 0 10px #fff,0 0 20px #ff4e50;} to { text-shadow:0 0 30px #f9d423,0 0 60px #f9d423; } }
+  @keyframes glow { 
+    from { text-shadow:0 0 10px #fff,0 0 20px #ff4e50;} 
+    to { text-shadow:0 0 30px #f9d423,0 0 60px #f9d423; } 
+  }
   h2 { margin-top:20px; color:#fff; font-size:2em; text-align:center; }
   input { padding:10px; font-size:1.1em; border-radius:8px; border:none; outline:none; margin:5px; }
   button { padding:12px 25px; font-size:1.2em; background:#ff4e50; border:none; border-radius:8px; color:white; cursor:pointer; transition:0.3s; margin-top:5px; }
   button:hover { background:#f9d423; color:#000000; }
   .confetti { position:absolute; width:10px; height:10px; background-color:#fff; animation:fall 5s infinite; }
-  @keyframes fall { 0% { transform:translateY(-10px) rotate(0deg); opacity:1; } 100% { transform:translateY(100vh) rotate(720deg); opacity:0;} }
+  @keyframes fall { 
+    0% { transform:translateY(-10px) rotate(0deg); opacity:1; } 
+    100% { transform:translateY(100vh) rotate(720deg); opacity:0;} 
+  }
   .cake { display:none; margin-top:40px; animation:fadeIn 2s ease forwards; }
   @keyframes fadeIn { from {opacity:0; transform:scale(0.5);} to {opacity:1; transform:scale(1);} }
   .cake svg { width:200px; animation:bounce 2s infinite alternate; }
@@ -43,7 +49,6 @@
     line-height:1.6em;
     white-space: pre-line;
   }
-  /* Smaller scroller */
   marquee {
     width:100%;
     background:#ff4e50;
@@ -60,8 +65,8 @@
 </head>
 <body>
 
-<h1>🎉 Happy Birthday  🎂</h1>
-<h2 id="nameDisplay">Enter your name below 👇</h2>
+<h1>&#x1F389; Happy Birthday  &#x1F382;</h1>
+<h2 id="nameDisplay">Enter your name below &#x1F447;</h2>
 
 <div>
   <input type="text" id="nameInput" placeholder="Enter your name">
@@ -81,31 +86,32 @@
 </div>
 
 <div class="message" id="message">
-🎈 To my dearest best friend Vissu maa 💖  
-1️⃣ You make every moment brighter ✨  
-2️⃣ Your smile spreads pure happiness 😊  
-3️⃣ You are strong, kind, and full of heart 💫  
-4️⃣ I’m lucky to have you in my life 💕  
-5️⃣ Every laugh we share is a treasure 🌸  
-6️⃣ You inspire everyone around you 🌟  
-7️⃣ Today is all about *you* and your joy 🎁  
-8️⃣ Keep shining like the star you are 🌙  
-9️⃣ May your dreams always come true 💭  
-🔟 Love you loads, my best friend forever💝
- 
+&#x1F388; To my dearest best friend Vissu maa &#x1F496;  
+&#x0031;&#x20E3; You make every moment brighter &#x2728;  
+&#x0032;&#x20E3; Your smile spreads pure happiness &#x1F60A;  
+&#x0033;&#x20E3; You are strong, kind, and full of heart &#x1F4AB;  
+&#x0034;&#x20E3; I’m lucky to have you in my life &#x1F495;  
+&#x0035;&#x20E3; Every laugh we share is a treasure &#x1F338;  
+&#x0036;&#x20E3; You inspire everyone around you &#x1F31F;  
+&#x0037;&#x20E3; Today is all about *you* and your joy &#x1F381;  
+&#x0038;&#x20E3; Keep shining like the star you are &#x1F319;  
+&#x0039;&#x20E3; May your dreams always come true &#x1F4AD;  
+&#x1F51F; Love you loads, my best friend forever&#x1F49D;
 </div>
 
 <!-- Birthday Song + Small Scroller -->
-<audio id="bdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
-<marquee behavior="scroll" direction="left">Happy Birthday Angel 🧚Happy Birthday cutee 💕 Happy Birthday Maharani 👸🏻 Happy Birthay Rakshasi 👻 </marquee>
+<audio id="bdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio>
+
+<marquee behavior="scroll" direction="left">
+Happy Birthday Angel &#x1F9DA;Happy Birthday cutee &#x1F495; Happy Birthday Maharani &#x1F478;&#x1F3FB; Happy Birthay Rakshasi &#x1F47B;
+</marquee>
 
 <script>
 function showWish(){
   const name = document.getElementById('nameInput').value.trim();
   if(!name){ alert("Please enter your name!"); return; }
 
-  document.getElementById('nameDisplay').innerHTML = "🎈 Wishing you a wonderful birthday, <b>" + name + "</b>! 🎁";
+  document.getElementById('nameDisplay').innerHTML = "&#x1F388; Wishing you a wonderful birthday, <b>" + name + "</b>! &#x1F381;";
   document.querySelector('.cake').style.display = 'block';
   document.getElementById('message').style.display = 'block';
   createConfetti();
