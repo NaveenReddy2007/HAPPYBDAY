@@ -6,22 +6,46 @@
 <title>Happy Birthday Vissu Maa!</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
+  html {
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ff4e50 #fad0c4; /* Firefox */
+  }
+
+  /* For Chrome, Edge, Safari */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fad0c4;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #f9d423, #ff4e50);
+  }
+
   body {
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
     font-family:'Poppins', sans-serif;
-    overflow:hidden;
   }
+
   h1 {
     font-size:5em;
     color:#fff;
     text-shadow:0 0 20px #ff4e50,0 0 40px #ff4e50;
     animation: glow 1.5s infinite alternate;
     text-align:center;
+    margin-top:20px;
   }
   @keyframes glow { 
     from { text-shadow:0 0 10px #fff,0 0 20px #ff4e50;} 
@@ -48,6 +72,7 @@
     text-align:center;
     line-height:1.6em;
     white-space: pre-line;
+    padding: 0 10px;
   }
   marquee {
     width:100%;
@@ -99,7 +124,6 @@
 &#x1F51F; Love you loads, my best friend forever&#x1F49D;
 </div>
 
-<!-- Birthday Song + Small Scroller -->
 <audio id="bdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"></audio>
 
 <marquee behavior="scroll" direction="left">
